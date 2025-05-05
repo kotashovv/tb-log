@@ -399,6 +399,9 @@ body {
   top: 10px;
 }
 
+.breadcrumbs {
+  margin: 20px 0 0;
+}
 .breadcrumbs__items {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1906,6 +1909,11 @@ body {
       -ms-flex-align: stretch;
           align-items: stretch;
   margin-bottom: 20px;
+  -webkit-transition: 0.35s ease;
+  transition: 0.35s ease;
+}
+.cases__item:hover {
+  background-color: #F2F8FF;
 }
 .cases__item:last-child {
   margin-bottom: 0;

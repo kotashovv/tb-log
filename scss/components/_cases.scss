@@ -26,6 +26,10 @@
         box-sizing: border-box;
         align-items: stretch;
         margin-bottom: 20px;
+        transition: .35s ease;
+        &:hover {
+            background-color: #F2F8FF;
+        }
         &:last-child {
             margin-bottom: 0;
         }
