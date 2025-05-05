@@ -1,0 +1,116 @@
+.information {
+    padding: 40px 0;
+    box-sizing: border-box;
+    // .information__title
+
+    &__title {
+        margin-bottom: 20px;
+
+        h2 {
+            font-size: 18px;
+            display: block;
+            margin: 0;
+            font-weight: 600;
+        }
+    }
+
+    &__items {
+        display: flex;
+    }
+
+    // .information__item
+
+    &__item {
+        width: calc(33.33% - 10px);
+        margin: 0 5px 10px;
+        padding: 20px 10px;
+        background-color: #fff;
+        box-sizing: border-box;
+        display: flex;
+        align-items: flex-start;
+        border-radius: 6px;
+
+        .num {
+            margin-right: 15px;
+
+            span {
+                display: block;
+                font-size: 32px;
+                font-weight: 600;
+                color: $blue;
+            }
+        }
+
+        .text {
+            h3 {
+                margin: 0;
+                display: block;
+                font-size: 16px;
+                font-weight: 500;
+                color: $black;
+                margin-bottom: 15px;
+            }
+
+            p {
+                display: block;
+                margin: 0;
+                color: $black;
+                font-size: 16px;
+                margin-bottom: 30px;
+            }
+
+            button {
+                font-weight: 300;
+                color: $gray;
+                border: none;
+                background-color: transparent;
+                cursor: pointer;
+                text-decoration: underline dotted;
+                &:hover {
+                    color: $blue;
+                }
+            }
+        }
+    }
+}
+
+.container {}
+
+.infortmation {
+
+    // .infortmation__items
+
+
+}
+
+.num {}
+
+.text {}
+
+@media(max-width:920px) {
+    .information {
+        &__items {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -5px;
+        }
+
+        &__item {
+            width: calc(50% - 10px);
+            margin: 0 5px 10px;
+        }
+    }
+}
+
+@media(max-width:560px) {
+    .information {
+        &__items {
+            margin: 0;
+        }
+        &__item {
+            width: 100%;
+            margin: 0 0 10px;
+            box-sizing: border-box;
+        }
+    }
+}

@@ -1,0 +1,127 @@
+.transport {
+    padding: 50px 0;
+    box-sizing: border-box;
+    // .transport__wrapper
+
+    &__wrapper {
+        background-color: #fff;
+        border-radius: 6px;
+        padding: 40px ;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    .swiper-navigation {
+        .nav-btn {
+            position: absolute;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            svg {
+                width: 24px;
+                height: 24px;
+            }
+            &.swiper-prev {
+                top: calc(50% - 12px);
+                left: 10px;
+            }
+            &.swiper-next {
+                top: calc(50% - 12px);
+                right: 10px;
+                svg {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+    
+
+    // .transport__title
+
+    &__title {
+        margin-bottom: 20px;
+        h2 {
+            margin: 0;
+            font-size: 18px;
+        }
+    }
+
+    // .transport__swiper
+
+    &__swiper {
+    }
+
+    // .transport__swiper-wrapper
+
+    &__swiper-wrapper {
+    }
+
+    // .transport__swpier-slide
+
+    &__swpier-slide {
+        padding: 10px;
+        box-sizing: border-box;
+        .img {
+            height: 240px;
+            box-sizing: border-box;
+            overflow: hidden;
+            border-radius: 6px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+                max-width: 100%;
+            }
+            margin-bottom: 15px;
+        }
+        .text {
+            h3 {
+                margin: 0;
+                display: block;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 1.3;
+                color: $black;
+                margin-bottom: 15px;
+            }
+            p {
+                display: block;
+                margin: 0;
+                font-weight: 300;
+                font-size: 16px;
+                margin-bottom: 15px;
+            }
+        }
+        .action {
+            .main-btn {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media(max-width:920px) {
+    .transport {
+        &__wrapper {
+            background-color: transparent;
+            margin: 0 -15px;
+        }
+    }
+}
+
+@media(max-width:560px) {
+    .transport {
+        &__wrapper {
+            padding: 0;
+            padding-left: 15px;
+        }
+        .swiper-navigation {
+            display: none;
+        }
+    }
+}

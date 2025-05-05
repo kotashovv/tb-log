@@ -1,0 +1,170 @@
+.header {
+
+}
+.header-top {
+        padding: 12px 0 10px;
+        box-sizing: border-box;
+		// .header-top__wrap
+        background-color: $graywhite;
+
+		&__wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+		}
+
+		// .header-top__city
+
+		&__city {
+            .city-text {
+                color: $blue;
+                cursor: pointer;
+                text-decoration: dotted;
+                text-decoration-color: $blue;
+                display: block;
+                width: fit-content;
+                position: relative;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    bottom: -2px;
+                    width: 100%;
+                    height: 3px; // толщина линии
+                    background-image: radial-gradient(circle, $blue 1px, transparent 1px);
+                    background-size: 5px 3px; // расстояние между точками
+                    background-repeat: repeat-x;
+                }
+            }
+		}
+
+		// .header-top__news
+
+		&__news {
+            span {
+                font-weight: 400;
+                font-size: 16px;
+                color: $black;
+            }
+		}
+
+		// .header-top__actions
+
+		&__actions {
+            display: flex;
+            align-items: center;
+            a {
+                color: $black;
+                font-weight: 600;
+                font-size: 16px;
+                text-decoration: none;
+                &:first-child {
+                    margin-right: 20px;
+                }
+            }
+		}
+}
+
+.header-bot {
+
+		// .header-bot__wrap
+
+		&__wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 0;
+            >a {
+                display: flex;
+                align-items: center;
+                color: $black;
+                font-weight: 600;
+                font-size: 18px;
+                box-sizing: border-box;
+                text-decoration: none;
+                img {
+                    display: block;
+                    margin-right: 10px;
+                    width: 40px;
+                    height: 36px;
+                }
+            }
+		}
+
+        
+
+		// .header-bot__nav
+
+		&__nav {
+            ul {
+                display: flex;
+                margin: 0 ;
+                padding: 0;
+                box-sizing: border-box;
+                list-style: none;
+                li {
+                    a {
+                        padding: 0 14px;
+                        box-sizing: border-box;
+                        color: $gray;
+                        text-decoration: none;
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 1.1;
+                        transition: .35s ease;
+                        &:hover {
+                            color: $blue;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+		}
+
+		// .header-bot__action
+
+		&__action {
+            display: flex;
+            flex-direction: column;
+            .main-btn {
+                margin-bottom: 10px;
+                padding: 10px 15px;
+                width: 100%;
+                box-sizing: border-box;
+            }
+            span {
+                text-align: center;
+                font-size: 12px;
+                font-weight: 400;
+                box-sizing: border-box;
+            }
+		}
+
+        &__burger {
+            display: none;
+            @media(max-width:920px) {
+                display: block;
+                .burger-btn {
+                    
+                }
+            }
+        }
+}
+
+
+@media(max-width:920px) {
+    .header {
+        .header-top {
+            display: none;
+        }
+        .header-bot {
+            &__nav {
+                display: none;
+            }
+            &__action {
+                display: none;
+            }
+        }
+    }
+}
