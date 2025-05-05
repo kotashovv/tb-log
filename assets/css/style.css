@@ -1821,3 +1821,291 @@ body {
     margin-bottom: 0;
   }
 }
+.docs {
+  padding: 40px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.docs__title {
+  margin-bottom: 40px;
+}
+.docs__title h2 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+.docs__slider {
+  position: relative;
+}
+.docs__navigation button {
+  position: absolute;
+  top: 0;
+  background-color: transparent;
+  z-index: 10;
+  border: none;
+  cursor: pointer;
+}
+.docs__navigation button.prev-el {
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.062745098);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.062745098);
+  top: 50%;
+  left: 5px;
+}
+.docs__navigation button.prev-el svg {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.docs__navigation button.next-el {
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.062745098);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.062745098);
+  top: 50%;
+  right: 5px;
+}
+.docs__slider-slide img {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media (max-width: 920px) {
+  .docs__navigation {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .docs__slider-swiper {
+    margin: 0 -15px;
+    padding-left: 15px;
+  }
+}
+.cases {
+  padding: 40px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.cases__title {
+  margin-bottom: 40px;
+}
+.cases__title h2 {
+  font-size: 18px;
+  margin: 0;
+  display: block;
+}
+.cases__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #fff;
+  padding: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  margin-bottom: 20px;
+}
+.cases__item:last-child {
+  margin-bottom: 0;
+}
+.cases__item .img {
+  margin-right: 30px;
+  width: 224px;
+  height: 190px;
+  border-radius: 9px;
+  overflow: hidden;
+}
+.cases__item .img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.cases__item .info {
+  margin-right: auto;
+}
+.cases__item .info-title {
+  font-size: 14px;
+  color: #B0B1B6;
+  display: block;
+  margin-bottom: 10px;
+}
+.cases__item .info-text {
+  color: #333;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.cases__item .info-way {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 15px;
+  border-bottom: 1px dotted #B0B1B6;
+}
+.cases__item .date {
+  margin-top: auto;
+  margin-left: 30px;
+}
+.cases__more-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 40px;
+}
+.cases__more-btn .more-btn {
+  border: none;
+  color: #B0B1B6;
+  padding: 5px;
+  background-color: transparent;
+  border-bottom: 1px dotted #B0B1B6;
+  -webkit-transition: 0.35s ease;
+  transition: 0.35s ease;
+  cursor: pointer;
+}
+.cases__more-btn .more-btn:hover {
+  color: #31B2E9;
+  border-color: #31B2E9;
+}
+
+@media (max-width: 768px) {
+  .cases__item {
+    padding: 15px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .cases__item .img {
+    width: 100%;
+    max-width: 420px;
+    margin: 0 0 20px;
+  }
+  .cases__item .date {
+    margin: 0;
+  }
+}
+.faq {
+  padding: 50px 0 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.faq__title {
+  margin-bottom: 40px;
+}
+.faq__title h2 {
+  margin: 0;
+  display: block;
+  font-size: 18px;
+}
+.faq__item {
+  margin-bottom: 20px;
+}
+.faq__item:last-child {
+  margin-bottom: 0;
+}
+.faq__item button {
+  padding: 30px 40px;
+  padding-right: 50px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  text-align: left;
+  border: none;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  color: #B0B1B6;
+  -webkit-transition: 0.35s ease;
+  transition: 0.35s ease;
+  cursor: pointer;
+}
+.faq__item button:hover {
+  color: #31B2E9;
+}
+.faq__item button::before {
+  content: "";
+  position: absolute;
+  right: 40px;
+  height: 2px;
+  background-color: #B0B1B6;
+  top: calc(50% - 1px);
+  width: 10px;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: 0.35s ease;
+  transition: 0.35s ease;
+}
+.faq__item button::after {
+  content: "";
+  position: absolute;
+  right: 35px;
+  height: 2px;
+  background-color: #B0B1B6;
+  top: calc(50% - 1px);
+  width: 10px;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transition: 0.35s ease;
+  transition: 0.35s ease;
+}
+.faq__item .faq-a {
+  background-color: #fff;
+  color: #333;
+  overflow: hidden;
+  max-height: 0;
+  visibility: hidden;
+  -webkit-transition: 0.35s ease;
+  transition: 0.35s ease;
+}
+.faq__item .faq-a p {
+  margin: 0;
+  padding: 0 40px;
+  color: #333;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.faq__item.active button {
+  color: #333;
+}
+.faq__item.active button::before {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.faq__item.active button::after {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.faq__item.active .faq-a {
+  max-height: -webkit-max-content;
+  max-height: -moz-max-content;
+  max-height: max-content;
+  visibility: visible;
+  padding: 20px 0;
+}
+@media (max-width: 560px) {
+  .faq__item button {
+    padding: 15px 35px 15px 15px;
+  }
+  .faq__item button::before {
+    right: 20px;
+  }
+  .faq__item button::after {
+    right: 15px;
+  }
+  .faq__item .faq-a p {
+    padding: 0 15px;
+  }
+}

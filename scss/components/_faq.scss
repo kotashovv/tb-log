@@ -1,0 +1,126 @@
+.faq {
+    padding: 50px 0 40px;
+    box-sizing: border-box;
+    // .faq__title
+
+    &__title {
+        margin-bottom: 40px;
+        h2 {
+            margin: 0;
+            display: block;
+            font-size: 18px;
+            
+        }
+    }
+
+    // .faq__items
+
+    &__items {
+    }
+
+    // .faq__item
+
+    &__item {
+        margin-bottom: 20px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+       
+        button {
+            padding: 30px 40px;
+            padding-right: 50px;
+            width: 100%;
+            box-sizing: border-box;
+            position: relative;
+            text-align: left;
+            border: none;
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            color: $gray;
+            transition: .35s ease;
+            cursor: pointer;
+            &:hover {
+                color: $blue;
+                
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                right: 40px;
+                height: 2px;
+                background-color: $gray;
+                top: calc(50% - 1px);
+                width: 10px;
+                transform: rotate(45deg);
+                transition: .35s ease;
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                right: 35px;
+                height: 2px;
+                background-color: $gray;
+                top: calc(50% - 1px);
+                width: 10px;
+                transform: rotate(-45deg);
+                transition: .35s ease;
+            }
+        }
+        .faq-a {
+            background-color: #fff;
+            color: $black;
+            overflow: hidden;
+            max-height: 0;
+            visibility: hidden;
+            transition: .35s ease;
+            p {
+                margin: 0;
+                padding: 0 40px;
+                color: $black;
+                box-sizing: border-box;
+            }
+        }
+        &.active {
+            button {
+                color: $black;
+                &::before {
+                    transform: rotate(-45deg);
+                }
+                &::after {
+                    transform: rotate(45deg);
+                }
+            }
+            .faq-a {
+                max-height: max-content;
+                visibility: visible;
+                padding: 20px 0;
+                p {
+                    
+                }
+            }
+        }
+    }
+}
+
+
+@media(max-width:560px) {
+    .faq{ 
+        &__item {
+            button {
+                padding: 15px 35px 15px 15px;
+                &::before {
+                    right: 20px;
+                }
+                &::after {
+                    right: 15px;
+                }
+            }
+            .faq-a {
+                p { 
+                    padding: 0 15px;
+                }
+            }
+        }
+    }
+}

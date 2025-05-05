@@ -1,5 +1,5 @@
-document.addEventListener('DOMContentLoaded', ()=>{
-    
+document.addEventListener('DOMContentLoaded', () => {
+
     const edgeSlider = new Swiper('.edge__swiper', {
         slidesPerView: 4,
         spaceBetween: 10,
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
             },
             768: {
                 slidesPerView: 2.2,
-            }, 
+            },
             920: {
                 slidesPerView: 3.2,
 
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
             },
             920: {
                 slidesPerView: 3,
-            }, 
+            },
             1200: {
                 slidesPerView: 4,
             }
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
             0: {
                 slidesPerView: 1.2,
             },
-            420:{
+            420: {
                 slidesPerView: 2.2,
             },
             560: {
@@ -75,4 +75,56 @@ document.addEventListener('DOMContentLoaded', ()=>{
             }
         }
     })
+
+
+    const docsSlider = new Swiper('.docs__slider-swiper', {
+        slidesPerView: 4,
+        spaceBetween: 20,
+        navigation: {
+            prevEl: ".docs__navigation .prev-el",
+            nextEl: ".docs__navigation .next-el",
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1.2,
+            },
+            430: {
+                slidesPerView: 2.2,
+            },
+            560: {
+                slidesPerView: 3.2,
+            },
+            920: {
+                slidesPerView: 4,
+            },
+
+        }
+    })
+
+    Fancybox.bind("[data-fancybox]", {
+        // Your custom options
+    });
+
+
+    const faqBtns = document.querySelectorAll('.faq-q');
+    if (faqBtns.length != 0) {
+        faqBtns.forEach(item=>{
+            item.addEventListener('click', (e)=>{   
+
+                if (!e.target.closest('.faq__item').classList.contains('active')) {
+                    CloseAllFaqBtns();
+                    e.target.closest('.faq__item').classList.add('active');
+                } else {
+                    CloseAllFaqBtns();
+                }
+                
+            })
+        })
+
+        function CloseAllFaqBtns(){ 
+            faqBtns.forEach(item=>{
+                item.closest('.faq__item').classList.remove('active');
+            })
+        }
+    }
 })
