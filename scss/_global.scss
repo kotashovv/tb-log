@@ -96,3 +96,31 @@ body {
         top: 10px;
     }
 }
+
+.breadcrumbs {
+
+    // .breadcrumbs__items
+
+    &__items {
+        display: flex;
+        align-items: center;
+        a {
+            margin-right: 5px;
+            text-decoration: none;
+            color: $black;
+            &:last-child {
+                pointer-events: none;
+                &::after {
+                    display: none;
+                }
+            }
+            &::after {
+                content: '-';
+                padding-left: 5px;
+                
+            }
+        }
+    }
+}
+.container {
+}
