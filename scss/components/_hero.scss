@@ -80,7 +80,7 @@
                     content: '';
                     position: absolute;
                     right: 15px;
-                    top: calc(50% - 1px);
+                    bottom: 25px;
                     height: 1px;
                     width: 8px;
                     background-color: $blue;
@@ -91,7 +91,7 @@
                     content: '';
                     position: absolute;
                     right: 10px;
-                    top: calc(50% - 1px);
+                    bottom: 25px;
                     height: 1px;
                     width: 8px;
                     background-color: $blue;

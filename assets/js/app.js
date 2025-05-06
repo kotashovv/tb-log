@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (closeMenuBtn) {
-        closeMenuBtn.addEventListener('click', ()=>{
+        closeMenuBtn.addEventListener('click', () => {
             CloseMenu();
         })
     }
@@ -157,4 +157,63 @@ document.addEventListener('DOMContentLoaded', () => {
     function CloseMenu() {
         mobileMenu.classList.remove('active');
     }
+
+    const hiddenTextbtn = document.querySelector('.more-read');
+    if (hiddenTextbtn) {
+        hiddenTextbtn.addEventListener('click', (e)=>{
+            hiddenTextbtn.style.display = 'none';
+            hiddenTextbtn.previousElementSibling.classList.remove('hidden-text');
+        })
+    }
+
+    const popupParent = document.querySelector('.popup');
+    const popupForm = document.querySelector('.popup__item.popup-form');
+    const callPopupBtns = document.querySelectorAll('.call-popup');
+    const closePopupBtns = document.querySelectorAll('.call-close-popup');
+
+
+    if (callPopupBtns.length != 0) {
+        callPopupBtns.forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                OpenPopupForm();
+            })
+        })
+        closePopupBtns.forEach(item => {
+            item.addEventListener('click', () => {
+                ClosePopup();
+            })
+        })
+    }
+
+    function OpenPopupForm() {
+        popupParent.classList.add('active');
+        popupForm.classList.add('active');
+
+        setTimeout(() => {
+            document.addEventListener('click', handleOutsideClick);
+        }, 0);
+    }
+
+    function ClosePopup() {
+        popupParent.classList.remove('active');
+        document.querySelector('.popup-form').classList.remove('active');
+        document.querySelector('.popup-success').classList.remove('active');
+
+        document.removeEventListener('click', handleOutsideClick);
+    }
+
+    function handleOutsideClick(e) {
+        if (!e.target.closest('.popup__item')) {
+            ClosePopup();
+        }
+    }
+
+
+    function SuccessForm() {
+        document.querySelector('.popup-form').classList.remove('active');
+        document.querySelector('.popup-success').classList.add('active');
+    }
+
+    SuccessForm();
 })

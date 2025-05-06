@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/libs/swiper-bundle.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="style.css">
     <title>Title</title>
 </head>
 
@@ -66,7 +66,7 @@
                             </ul>
                         </div>
                         <div class="header-bot__action">
-                            <button class="main-btn">Заказать звонок</button>
+                            <button class="main-btn call-popup">Заказать звонок</button>
                             <span>
                                 Перезвоним в течении 15 минут
                             </span>
@@ -138,7 +138,7 @@
                             <p>
                                 Быстрая доставка сборных грузов, товаров, посылок и документов по всей России
                             </p>
-                            <button class="main-btn white-btn">
+                            <button class="main-btn white-btn call-popup">
                                 Стать клиентом
                             </button>
                         </div>
@@ -180,7 +180,7 @@
                                 </select>
                             </label>
                             <div class="action form-item">
-                                <button class="main-btn">Рассчитать стоимость</button>
+                                <button class="main-btn call-popup">Рассчитать стоимость</button>
                             </div>
                         </form>
                         <div class="hero-calc__info">
@@ -717,7 +717,7 @@
                                 </select>
                             </label>
                             <div class="action form-item">
-                                <button class="main-btn">Рассчитать стоимость</button>
+                                <button class="main-btn call-popup">Рассчитать стоимость</button>
                             </div>
                         </form>
                         <div class="hero-calc__info">
@@ -789,7 +789,7 @@
                     </div>
 
                     <div class="footer__action">
-                        <a class="main-btn" href="#">
+                        <a class="main-btn call-popup" href="#">
                             Заказать звонок
                         </a>
                         <a class="main-btn trans-btn" href="#">
@@ -805,6 +805,55 @@
                 </div>
             </div>
         </footer>
+
+        <div class="popup">
+            <div class="popup__body">
+                <div class="popup__item popup-form">
+                    <button class="close-btn call-close-popup">
+
+                    </button>
+                    <div class="popup__title">
+                        <h2>
+                            Укажите контакт, куда прислать расчёт
+                        </h2>
+                        <p>
+                            С Вами свяжется наш менеджер для уточнения деталей и подготовки коммерческого предложения
+                        </p>
+                    </div>
+                    <form class="popup__form">
+                        <label>
+                            <input type="text" placeholder="Имя">
+                        </label>
+                        <label>
+                            <input type="tel" placeholder="Номер телефона">
+                        </label>
+                        <label>
+                            <input type="email" placeholder="Электронная почта">
+                        </label>
+                        <div class="action">
+                            <button class="main-btn">Получить расчёт</button>
+                        </div>
+                        <input type="hidden" name="from" value="">
+                        <input type="hidden" name="to" value="">
+                        <input type="hidden" name="transport" value="">
+                        <input type="hidden" name="weight" value="">
+                        <input type="hidden" name="type" value="">
+                    </form>
+                </div>
+                <div class="popup__item popup-success">
+                    <button class="close-btn call-close-popup">
+                    </button>
+                    <div class="popup__title">
+                        <h2>
+                            Спасибо за обращение!
+                        </h2>
+                    </div>
+                    <div class="action">
+                        <a href="#" class="main-btn">Закрыть</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="assets/libs/swiper-bundle.min.js"></script>
     <script src="assets/js/app.js"></script>

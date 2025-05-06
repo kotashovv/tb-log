@@ -1,0 +1,84 @@
+.calc-page {
+    background-color: #037eb1;
+    margin-top: -1px;
+    // .calc-page__wrapper
+    padding: 40px 0;
+    box-sizing: border-box;
+    padding-bottom: 100px;
+
+    &__wrapper {
+        .hero-calc {
+            margin-top: 0;
+            box-sizing: border-box;
+            // .hero-calc__form
+
+            &__form {
+                flex-wrap: wrap;
+                margin: 0 -5px;
+                gap: 0;
+
+                label {
+                    span {
+                        &.form-subtitle {
+                            font-size: 14px;
+                            display: block;
+                            margin-bottom: 5px;
+                            color: $black;
+                            font-weight: 500;
+                        }
+                    }
+
+                    width: calc(50% - 10px);
+                    margin: 0 5px 10px;
+                    box-sizing: border-box;
+
+                    &.half {
+                        width: calc(25% - 10px);
+                    }
+                }
+
+                .action {
+                    width: 100%;
+                    max-width: none;
+
+                    button {
+                        max-width: 260px;
+                        width: 100%;
+                        box-sizing: border-box;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media(max-width:768px) {
+    .calc-page {
+        .hero-calc {
+            padding: 20px 15px;
+            &__form {
+                margin: 0;
+                label {
+                    width: 100%;
+                    margin: 0 0 10px;
+                    span {
+                        &.form-subtitle {}
+                    }
+
+
+                    &.half {
+                        width: 100%;
+                        margin: 0 0 10px;
+                    }
+                }
+                .action {
+                    button {
+                        width: 100%;
+                        max-width: none;
+                    }
+                }
+            }
+        }
+    }
+}
