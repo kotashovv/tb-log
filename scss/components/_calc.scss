@@ -18,6 +18,18 @@
                 gap: 0;
 
                 label {
+                    &.error {
+                        select {
+                            border: 1px solid #ff0000;
+                        }
+                    }
+
+                    &.changed {
+                        select {
+                            color: $black;
+                        }
+                    }
+
                     span {
                         &.form-subtitle {
                             font-size: 14px;
@@ -57,11 +69,14 @@
     .calc-page {
         .hero-calc {
             padding: 20px 15px;
+
             &__form {
                 margin: 0;
+
                 label {
                     width: 100%;
                     margin: 0 0 10px;
+
                     span {
                         &.form-subtitle {}
                     }
@@ -72,6 +87,7 @@
                         margin: 0 0 10px;
                     }
                 }
+
                 .action {
                     button {
                         width: 100%;
@@ -80,5 +96,22 @@
                 }
             }
         }
+    }
+}
+
+.hero-calc__form {
+    label {
+        &.error {
+            select, input {
+                border: 1px solid #ff0000;
+            }
+        }
+
+        &.changed {
+            select, input {
+                color: $black;
+            }
+        }
+
     }
 }

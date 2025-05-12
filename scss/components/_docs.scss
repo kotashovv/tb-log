@@ -29,20 +29,42 @@
             z-index: 10;
             border: none;
             cursor: pointer;
+            top: 50%;
             &.prev-el {
-                border-radius: 50%;
-                box-shadow: 0 0 10px #00000010;
-                top: 50%;
                 left: 5px;
+                
+            }
+            &.next-el {
+                right: 5px;
                 svg {
                     transform: rotate(180deg);
                 }
             }
-            &.next-el {
-                border-radius: 50%;
-                box-shadow: 0 0 10px #00000010;
-                top: 50%;
-                right: 5px;
+            &:hover {
+                svg {
+                    rect {
+                        fill: $blue;
+                    }
+
+                    path {
+                        stroke: $white;
+                    }
+                }
+            }
+
+            svg {
+                width: 44px;
+                height: 44px;
+
+                rect {
+                    fill: #fff;
+                    transition: .35s ease;
+                }
+
+                path {
+                    stroke: $black;
+                    transition: .35s ease;
+                }
             }
         }
     }

@@ -2,11 +2,11 @@
     padding: 50px 0;
     box-sizing: border-box;
     // .transport__wrapper
-
+    overflow: hidden;
     &__wrapper {
         background-color: #fff;
         border-radius: 6px;
-        padding: 40px ;
+        padding: 40px;
         box-sizing: border-box;
         position: relative;
     }
@@ -21,29 +21,52 @@
             background-color: transparent;
             border: none;
             cursor: pointer;
-            svg {
-                width: 24px;
-                height: 24px;
+            z-index: 100;
+            &:hover {
+                svg {
+                    rect {
+                        fill: $blue;
+                    }
+                    path {
+                        stroke: $white;
+                    }
+                }
             }
+            svg {
+                width: 44px;
+                height: 44px;
+                rect {
+                        fill: #fff;
+                        transition: .35s ease;
+                    }
+                    path {
+                        stroke: $black;
+                        transition: .35s ease;
+                    }
+            }
+
             &.swiper-prev {
                 top: calc(50% - 12px);
                 left: 10px;
             }
+
             &.swiper-next {
                 top: calc(50% - 12px);
                 right: 10px;
+
                 svg {
                     transform: rotate(180deg);
                 }
             }
         }
     }
-    
+
 
     // .transport__title
 
     &__title {
         margin-bottom: 20px;
+
         h2 {
             margin: 0;
             font-size: 18px;
@@ -53,23 +76,39 @@
     // .transport__swiper
 
     &__swiper {
+        padding: 0 10px;
+        margin: 0 -10px;
     }
 
     // .transport__swiper-wrapper
 
     &__swiper-wrapper {
+    overflow: visible;
+        padding: 10px 0;
     }
 
     // .transport__swpier-slide
 
     &__swpier-slide {
+        transition: .35s ease;
         padding: 10px;
         box-sizing: border-box;
+        outline: 1px solid rgba(49, 178, 233, 0);
+        &:hover {
+            box-sizing: border-box;
+            /* main */
+            outline: 1px solid rgba(49, 178, 233, 1);
+            box-shadow: 0px 4px 15.4px 0px rgba(49, 178, 233, 0.25);
+            background: rgb(255, 255, 255);
+
+        }
+
         .img {
             height: 240px;
             box-sizing: border-box;
             overflow: hidden;
             border-radius: 6px;
+
             img {
                 width: 100%;
                 height: 100%;
@@ -77,8 +116,10 @@
                 display: block;
                 max-width: 100%;
             }
+
             margin-bottom: 15px;
         }
+
         .text {
             h3 {
                 margin: 0;
@@ -89,6 +130,7 @@
                 color: $black;
                 margin-bottom: 15px;
             }
+
             p {
                 display: block;
                 margin: 0;
@@ -97,6 +139,7 @@
                 margin-bottom: 15px;
             }
         }
+
         .action {
             .main-btn {
                 width: 100%;
@@ -120,6 +163,7 @@
             padding: 0;
             padding-left: 15px;
         }
+
         .swiper-navigation {
             display: none;
         }

@@ -215,5 +215,4 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('.popup-success').classList.add('active');
     }
 
-    SuccessForm();
 })

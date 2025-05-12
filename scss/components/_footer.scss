@@ -40,6 +40,11 @@
                 padding: 8px;
                 margin: 0 5px 10px;
                 border-radius: 6px;
+                transition: .35s ease;
+                &:hover {
+                    color: $white;
+                    background-color: $blue;
+                }
             }
         }
     }
